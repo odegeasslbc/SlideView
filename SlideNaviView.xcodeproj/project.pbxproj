@@ -13,6 +13,9 @@
 		320E25581B7BC57600E0F9E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 320E25571B7BC57600E0F9E3 /* Images.xcassets */; };
 		320E255B1B7BC57600E0F9E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 320E25591B7BC57600E0F9E3 /* LaunchScreen.xib */; };
 		320E25671B7BC57600E0F9E3 /* SlideNaviViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E25661B7BC57600E0F9E3 /* SlideNaviViewTests.swift */; };
+		320E25711B7BC58F00E0F9E3 /* HorizonalSlidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E25701B7BC58F00E0F9E3 /* HorizonalSlidView.swift */; };
+		320E25731B7BC59600E0F9E3 /* MainSlidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320E25721B7BC59600E0F9E3 /* MainSlidView.swift */; };
+		32FD86A91B7C2B9E008245E5 /* SlideNaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FD86A81B7C2B9E008245E5 /* SlideNaviView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		320E25601B7BC57600E0F9E3 /* SlideNaviViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideNaviViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320E25651B7BC57600E0F9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		320E25661B7BC57600E0F9E3 /* SlideNaviViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNaviViewTests.swift; sourceTree = "<group>"; };
+		320E25701B7BC58F00E0F9E3 /* HorizonalSlidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizonalSlidView.swift; sourceTree = "<group>"; };
+		320E25721B7BC59600E0F9E3 /* MainSlidView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSlidView.swift; sourceTree = "<group>"; };
+		32FD86A81B7C2B9E008245E5 /* SlideNaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideNaviView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				320E25501B7BC57600E0F9E3 /* AppDelegate.swift */,
+				32ABFF1D1B7DB3570032EF94 /* SlideNaviView */,
 				320E25521B7BC57600E0F9E3 /* ViewController.swift */,
 				320E25541B7BC57600E0F9E3 /* Main.storyboard */,
 				320E25571B7BC57600E0F9E3 /* Images.xcassets */,
@@ -110,6 +117,16 @@
 				320E25651B7BC57600E0F9E3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32ABFF1D1B7DB3570032EF94 /* SlideNaviView */ = {
+			isa = PBXGroup;
+			children = (
+				32FD86A81B7C2B9E008245E5 /* SlideNaviView.swift */,
+				320E25701B7BC58F00E0F9E3 /* HorizonalSlidView.swift */,
+				320E25721B7BC59600E0F9E3 /* MainSlidView.swift */,
+			);
+			name = SlideNaviView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320E25711B7BC58F00E0F9E3 /* HorizonalSlidView.swift in Sources */,
+				32FD86A91B7C2B9E008245E5 /* SlideNaviView.swift in Sources */,
+				320E25731B7BC59600E0F9E3 /* MainSlidView.swift in Sources */,
 				320E25531B7BC57600E0F9E3 /* ViewController.swift in Sources */,
 				320E25511B7BC57600E0F9E3 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +431,7 @@
 				320E256C1B7BC57600E0F9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		320E256D1B7BC57600E0F9E3 /* Build configuration list for PBXNativeTarget "SlideNaviViewTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +440,7 @@
 				320E256F1B7BC57600E0F9E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
