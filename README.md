@@ -3,6 +3,10 @@
 
 Integrated by UIView rather than UIViewController.
 
+![alt tag](https://cloud.githubusercontent.com/assets/9973368/13720709/9fddf2ce-e7dd-11e5-97cf-839f76330af5.gif)
+
+![alt tag](https://cloud.githubusercontent.com/assets/9973368/13720710/a0fd8ff2-e7dd-11e5-8a84-aef7da05fa91.gif)
+
 ##USAGE
 ###Initialize
 ```swift
