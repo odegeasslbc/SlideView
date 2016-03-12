@@ -50,7 +50,7 @@ class SlideNaviView: UIView {
     }
     
     init(frame:CGRect,units:Int){
-        var superFrame = CGRectMake(0, frame.minY, screen.width, frame.height)
+        let superFrame = CGRectMake(0, frame.minY, screen.width, frame.height)
         super.init(frame:superFrame)
         self.backgroundColor = UIColor.clearColor()
         //mainViewUnits = [UIView]()
@@ -90,7 +90,7 @@ class SlideNaviView: UIView {
         self.addSubview(bl)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

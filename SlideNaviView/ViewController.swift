@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             slideNaviView.modifyLabelUnit(atIndex: i, operation: {
                 label in
                     label.text = "\(i+1)"
-                    var colorKey = CGFloat(i)*0.1
+                    let colorKey = CGFloat(i)*0.1
                     label.backgroundColor = UIColor(red: 1, green: 0.8-colorKey, blue: 0.1+colorKey, alpha: 1)
                 
                     //label.layer.borderWidth = 2.0

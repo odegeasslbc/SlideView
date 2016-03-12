@@ -33,7 +33,7 @@ class MainSlidView: UIView, HorizonalSlidViewDelegate {
     
     //获取当前显示的子view
     func currentUnit() -> Int{
-        var numberOfUnit = Int((-self.frame.minX)/self.unitLength)
+        let numberOfUnit = Int((-self.frame.minX)/self.unitLength)
         return numberOfUnit
     }
     
@@ -46,7 +46,7 @@ class MainSlidView: UIView, HorizonalSlidViewDelegate {
         case .Changed:
             self.frame = CGRectMake(self.startX! + sender.translationInView(self).x, self.frame.minY, self.unitLength * self.units, self.frame.height)
         case .Ended, .Cancelled:
-            var trans = sender.translationInView(self).x
+            let trans = sender.translationInView(self).x
             var finalX = self.startX! + self.unitLength * CGFloat(Int(trans/self.unitLength))
             
             if(trans%self.unitLength > 0.2*self.unitLength){
@@ -68,7 +68,7 @@ class MainSlidView: UIView, HorizonalSlidViewDelegate {
                 self.frame = CGRectMake(finalX, self.frame.minY, self.unitLength * self.units, self.frame.height)}
             )
             
-            var numberOfUnit = self.currentUnit()
+            let numberOfUnit = self.currentUnit()
             delegate?.choosenUnit(numberOfUnit)
             
         default:
@@ -134,11 +134,11 @@ class MainSlidView: UIView, HorizonalSlidViewDelegate {
         //初始化所有子view
         self.unitViews = [UIView]()
         for i in 0..<Int(units){
-            var index = CGFloat(i)
-            var x = index * self.unitLength
+            let index = CGFloat(i)
+            let x = index * self.unitLength
 
-            var view = UIView(frame: CGRectMake(x, 0, self.unitLength, self.unitHeight))
-            var colorKey = CGFloat(i)*0.1
+            let view = UIView(frame: CGRectMake(x, 0, self.unitLength, self.unitHeight))
+            let colorKey = CGFloat(i)*0.1
             view.backgroundColor = UIColor(red: 1, green: 0.8-colorKey, blue: 0.1+colorKey, alpha: 1)
             unitViews.append(view)
         }
@@ -153,7 +153,7 @@ class MainSlidView: UIView, HorizonalSlidViewDelegate {
     
     
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

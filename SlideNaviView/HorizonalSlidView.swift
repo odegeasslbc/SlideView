@@ -48,7 +48,7 @@ class HorizonalSlidView: UIView,MainSlidViewDelegate {
             self.frame = CGRectMake(self.startX! + sender.translationInView(self).x, self.frame.minY, self.unitLength * self.units, self.frame.height)
         case .Ended, .Cancelled:
             
-            var trans = sender.translationInView(self).x
+            let trans = sender.translationInView(self).x
             
             var finalX = self.startX! + self.unitLength * CGFloat(Int(trans/self.unitLength))
 
@@ -83,7 +83,7 @@ class HorizonalSlidView: UIView,MainSlidViewDelegate {
     }
     
     func moveByTap(sender:UITapGestureRecognizer){
-        var numberOfUnit = Int(sender.locationInView(self).x/self.unitLength)
+        let numberOfUnit = Int(sender.locationInView(self).x/self.unitLength)
         delegate?.choosenUnit(numberOfUnit)
         
         moveToMid(numberOfUnit)
@@ -120,10 +120,10 @@ class HorizonalSlidView: UIView,MainSlidViewDelegate {
         statusBar?.backgroundColor = UIColor.blueColor()
         
         for i in 0..<Int(units){
-            var newView = UIView(frame: CGRectMake(unitLength*CGFloat(i), 0, self.unitLength, self.unitHeight))
-            var label = UILabel(frame: CGRectMake(0, 0, self.unitLength, self.unitHeight-5))
+            let newView = UIView(frame: CGRectMake(unitLength*CGFloat(i), 0, self.unitLength, self.unitHeight))
+            let label = UILabel(frame: CGRectMake(0, 0, self.unitLength, self.unitHeight-5))
 
-            var colorKey = CGFloat(i)*0.1
+            let colorKey = CGFloat(i)*0.1
             label.backgroundColor = UIColor(red: 1, green: 0.8-colorKey, blue: 0.1+colorKey, alpha: 1)
             newView.backgroundColor = UIColor(red: 1, green: 0.8-colorKey, blue: 0.1+colorKey, alpha: 1)
 
@@ -149,7 +149,7 @@ class HorizonalSlidView: UIView,MainSlidViewDelegate {
     
     
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     /*
