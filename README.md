@@ -1,21 +1,22 @@
 # SlideNaviView
-滑动导航控制器
+## A slide navi controller 
 
-以UIView而不是UIViewController为父类制作的导航控制器，简单实用。
+Integrated by UIView rather than UIViewController.
 
-创建:
-
+##USAGE
+###Initialize
+```swift
 let slideNaviView = SlideNaviView(frame: CGRect) 
+```
 
-
-修改某一特定主页面或导航栏单元:
-
+###Modification
+```swift
 slideNaviView.modifyMainViewUnit(atIndex: 2, operation: {view in view.backgroundColor = UIColor.blueColor()})
 slideNaviView.modifyLabelUnit(atIndex: 0, operation: {label in label.text = "一"})
-
+```
         
-添加某一个或某一组主页面:
-
+###Add unit views
+```swift
 var firstView = UIView(frame: CGRectMake(0, 2, 20, 20))
 
 firstView.backgroundColor = UIColor.greenColor()
@@ -37,4 +38,4 @@ tmp.append(secondView)
 slideNaviView.insertMainView(2, view: thirdView)
 
 slideNaviView.setMainViews(tmp)
-
+```
