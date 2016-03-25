@@ -21,6 +21,9 @@ slideNaviView.modifyLabelUnit(atIndex: 0, operation: {label in label.text = "一
         
 ###Add unit views
 ```swift
+
+//initialize reach sub views
+
 var firstView = UIView(frame: CGRectMake(0, 2, 20, 20))
 
 firstView.backgroundColor = UIColor.greenColor()
@@ -39,7 +42,8 @@ tmp.append(firstView)
 
 tmp.append(secondView)
 
+// sub views can be inserted directly
 slideNaviView.insertMainView(2, view: thirdView)
-
+// sub views can also be inserted together as an array of views
 slideNaviView.setMainViews(tmp)
 ```
